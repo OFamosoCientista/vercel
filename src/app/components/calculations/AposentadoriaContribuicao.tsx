@@ -20,7 +20,7 @@ export default function AposentadoriaContribuicao() {
     const ageNum = parseFloat(age);
 
     // Regra de pontos (2026)
-    const requiredPoints = gender === "masculino" ? 100 : 90;
+    const requiredPoints = gender === "masculino" ? 103 : 93;
     const minContribution = gender === "masculino" ? 35 : 30;
 
     const currentPoints = ageNum + yearsNum;

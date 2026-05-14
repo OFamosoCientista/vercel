@@ -66,12 +66,12 @@ export default function TempoContribuicao() {
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm text-gray-600">Período {index + 1}</span>
                 {periods.length > 1 && (
-                  <button
+                  <Button
                     onClick={() => removePeriod(period.id)}
                     className="text-red-500 hover:text-red-700 transition-colors"
                   >
                     <Trash2 className="w-5 h-5" />
-                  </button>
+                  </Button>
                 )}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

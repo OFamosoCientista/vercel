@@ -7,6 +7,7 @@ import AposentadoriaContribuicao from "../components/calculations/AposentadoriaC
 import RevisaoVidaToda from "../components/calculations/RevisaoVidaToda";
 import ValoresAtrasados from "../components/calculations/ValoresAtrasados";
 import RMI from "../components/calculations/RMI";
+import JurosCalculator from "../components/calculations/JurosSimplesComposto";
 
 const calculationInfo: Record<string, { title: string; description: string; color: string }> = {
   "tempo-contribuicao": {
@@ -38,6 +39,11 @@ const calculationInfo: Record<string, { title: string; description: string; colo
     title: "Renda Mensal Inicial (RMI)",
     description: "Calcule a renda mensal inicial do seu benefício previdenciário",
     color: "from-pink-500 to-pink-700"
+  },
+  "juros": {
+    title: "Juros Simples e Compostos",
+    description: "Calcule o rendimento de juros simples e compostos ao longo do tempo",
+    color: "from-yellow-500 to-yellow-700"
   }
 };
 
@@ -72,6 +78,8 @@ export default function CalculationPage() {
         return <ValoresAtrasados />;
       case "rmi":
         return <RMI />;
+      case "juros":
+        return <JurosCalculator />;
       default:
         return null;
     }

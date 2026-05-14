@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Calculator, Clock, TrendingUp, FileText, DollarSign, Award } from "lucide-react";
+import { Calculator, Clock, TrendingUp, FileText, DollarSign, Award, BadgeDollarSign } from "lucide-react";
 import { useEffect, useState } from "react";
 import { auth } from "../contexts/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -54,6 +54,13 @@ const categories: CalculationCategory[] = [
     description: "Calcule a renda mensal inicial do benefício",
     icon: <FileText className="w-8 h-8" />,
     color: "from-pink-500 to-pink-700"
+  },
+  {
+    id: "juros",
+    title: "Juros Simples e Compostos",
+    description: "Calcule o valor final e os juros de um investimento ao longo do tempo",
+    icon: <BadgeDollarSign className="w-8 h-8" />,
+    color: "from-yellow-500 to-yellow-700"
   }
 ];
 
