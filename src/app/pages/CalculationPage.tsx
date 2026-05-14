@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router";
 import { ArrowLeft, Calculator, Download, Info } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TempoContribuicao from "../components/calculations/TempoContribuicao";
 import AposentadoriaIdade from "../components/calculations/AposentadoriaIdade";
 import AposentadoriaContribuicao from "../components/calculations/AposentadoriaContribuicao";
@@ -62,6 +62,14 @@ const calculationInfo: Record<string, { title: string; description: string; colo
 export default function CalculationPage() {
   const { tipo } = useParams<{ tipo: string }>();
   const info = tipo ? calculationInfo[tipo] : null;
+
+  useEffect(() => {
+    if (info) {
+      document.title = `${info.title} - Cálculos Previdenciários | CalcPrev`;
+    } else {
+      document.title = "Cálculos Previdenciários | CalcPrev";
+    }
+  }, [info]);
 
   if (!info || !tipo) {
     return (

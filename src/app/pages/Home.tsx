@@ -79,6 +79,9 @@ const categories: CalculationCategory[] = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Cálculos Previdenciários Gratuitos | CalcPrev - INSS Online";
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Hero Section */}

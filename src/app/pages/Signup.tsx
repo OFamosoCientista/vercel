@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { auth, db } from "../contexts/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -16,6 +16,9 @@ const firebaseConfig = {
 };
 
 export default function Signup() {
+  useEffect(() => {
+    document.title = "Cadastro - Cálculos Previdenciários | CalcPrev";
+  }, []);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

@@ -7,6 +7,9 @@ import emailjs from "emailjs-com";
 
 
 export default function Perfil() {
+    useEffect(() => {
+        document.title = "Perfil - Cálculos Previdenciários | CalcPrev";
+    }, []);
     const [user, setUser] = useState<any>(null);
     const [dados, setDados] = useState<any>(null);
     const navigate = useNavigate();

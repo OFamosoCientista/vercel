@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router';
 
 import { auth } from "../contexts/firebase";
@@ -19,6 +19,9 @@ const firebaseConfig = {
 const auth = getAuth(app);*/
 
 export default function Login() {
+  useEffect(() => {
+    document.title = "Login - Cálculos Previdenciários | CalcPrev";
+  }, []);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
