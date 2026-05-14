@@ -1,6 +1,5 @@
 import { Outlet, Link } from "react-router";
 import { Scale, Home, Menu, LogIn, UserPlus, LogOut, User } from "lucide-react";
-import { useAuth } from "../contexts/AuthContext";
 import { useEffect, useState } from "react";
 import { auth } from "../contexts/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";

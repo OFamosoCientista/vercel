@@ -108,19 +108,12 @@ export default function Perfil() {
                     </p>
                 </div>
 
-                <div className="bg-gray-100 p-4 rounded-lg">
-                    <p className="text-sm text-gray-500">ID do Usuário</p>
-                    <p className="text-sm text-gray-700 break-all">
-                    {user.uid}
-                    </p>
-                </div>
-
                 </div>
 
                 <form onSubmit={enviarEmail} className="mt-8 space-y-4">
 
                     <h2 className="text-xl font-semibold text-gray-800">
-                        Enviar mensagem
+                        Entre em contato
                     </h2>
 
                     <input

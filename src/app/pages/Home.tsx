@@ -1,8 +1,6 @@
 import { Link } from "react-router";
 import { Calculator, Clock, TrendingUp, FileText, DollarSign, Award, BadgeDollarSign, Table } from "lucide-react";
-import { useEffect, useState } from "react";
-import { auth } from "../contexts/firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect } from "react";
 
 interface CalculationCategory {
   id: string;

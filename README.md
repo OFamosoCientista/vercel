@@ -1,108 +1,135 @@
-# Portal Previdenciário
+# CalcPrev
 
-Sistema web desenvolvido para simulação de cálculos previdenciários, com foco em aposentadoria e benefícios do INSS. O projeto foi criado com o objetivo de facilitar a compreensão dos valores e regras aplicadas ao cálculo de benefícios.
+Aplicação web moderna desenvolvida com React + Vite, utilizando diversas bibliotecas modernas de UI e integração com serviços como Firebase e Supabase.
 
----
+# Sobre o Projeto
 
-## Objetivo
+Este projeto é uma aplicação frontend focada em performance e escalabilidade, utilizando o ecossistema moderno do React com Vite para build rápido e desenvolvimento ágil.
 
-O **Portal Previdenciário** tem como finalidade auxiliar usuários a:
+Ele integra:
 
-* Simular **aposentadoria por idade**
-* Calcular **tempo de contribuição**
-* Estimar o **valor do benefício previdenciário**
-* Compreender melhor seus direitos previdenciários
-
----
-
-## Tecnologias Utilizadas
-
-O projeto foi desenvolvido utilizando tecnologias básicas de desenvolvimento web:
-
-* **HTML5** → estrutura das páginas
-* **CSS3** → estilização e layout
-* **JavaScript** → lógica e cálculos
-
----
-
-## Estrutura do Projeto
-
-```
-  desenvolvimento-web-Grupo-E
- ┣ 📄 index.html           → Página inicial
- ┣ 📄 calculadoras.html    → Área de cálculos
- ┣ 📄 servicos.html        → Serviços oferecidos
- ┣ 📄 sobre.html           → Informações institucionais
- ┣ 📄 contato.html         → Página de contato
- ┣ 📄 login.html           → Sistema de login
- ┣ 📄 style.css            → Estilos do site
- ┣ 📄 main.js              → Funcionalidades gerais
- ┣ 📄 calc.js              → Lógica de cálculos
- ┗ 📄 README.md            → Documentação do projeto
-```
+🔐 Autenticação (Firebase / Supabase)
+🎨 Interface moderna com MUI + Radix UI
+📊 Componentes interativos e gráficos
+⚡ Alta performance com Vite
+🧠 Tecnologias Utilizadas
+🖥️ Frontend
+React 18
+Vite
+TypeScript
+🎨 UI / UX
+Material UI (MUI)
+Radix UI
+Tailwind CSS
+Lucide Icons
+Framer Motion
+🔥 Backend / Serviços
+Firebase
+Supabase
+📦 Outras libs importantes
+React Router
+React Hook Form
+Recharts (gráficos)
+Date-fns
+EmailJS
 
 ---
 
-## Funcionalidades
+# Estrutura do Projeto
 
-* Interface simples e intuitiva
-* Simulações previdenciárias em tempo real
-* Navegação entre múltiplas páginas
-* Sistema básico de login (front-end)
-* Cálculos dinâmicos com JavaScript
-
----
-
-## Como Executar o Projeto
-
-1. Baixe ou clone este repositório:
-
-   ```bash
-   git clone <url-do-repositorio>
-   ```
-
-2. Acesse a pasta do projeto:
-
-   ```bash
-   cd desenvolvimento-web-Grupo-E
-   ```
-
-3. Abra o arquivo `index.html` em seu navegador
+📦 project
+ ┣ 📂 public
+ ┣ 📂 src
+ ┣ 📜 index.html
+ ┣ 📜 package.json
+ ┣ 📜 vite.config.ts
+ ┣ 📜 vercel.json
+ ┗ 📜 README.md
+⚙️ Como Rodar o Projeto
+🔧 Pré-requisitos
+Node.js (>= 18)
+npm ou pnpm
 
 ---
 
-## Observações
-
-* Este projeto é **totalmente front-end**, não possuindo integração com banco de dados ou back-end.
-* Os cálculos são realizados localmente no navegador.
-* O sistema tem fins **educacionais/acadêmicos**.
+# Instalação
+## Clonar o repositório
+git clone https://github.com/seu-usuario/seu-repo.git
 
 ---
 
-## Equipe de Desenvolvimento
-
-Projeto desenvolvido por alunos como parte de atividade acadêmica.
-
-Vinicius Maximus
-Mariana Larussi
-Leticia Gabrielly
-Gabriel Pereira
-Ketlyn Kayane
+## Entrar na pasta
+cd seu-repo
 
 ---
 
-## Data
-
-Fevereiro de 2026 até ...
+## Instalar dependências
+npm install
+▶️ Rodar em desenvolvimento
+npm run dev
 
 ---
 
-## Licença
+## O projeto estará disponível em:
 
-Este projeto é de uso acadêmico e livre para estudos.
+http://localhost:5173
+🏗️ Build de produção
+npm run build
+☁️ Deploy na Vercel
+
+Este projeto já está preparado para deploy na Vercel com o arquivo:
+
+vercel.json
+Deploy rápido:
+Suba o projeto no GitHub
+Acesse: https://vercel.com
+Importe o repositório
+Clique em Deploy
+
+---
+
+## Variáveis de Ambiente
+
+Crie um arquivo .env na raiz com:
+
+VITE_FIREBASE_API_KEY=...
+VITE_FIREBASE_AUTH_DOMAIN=...
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
+✨ Funcionalidades
+🔐 Sistema de autenticação
+📊 Visualização de dados
+📅 Manipulação de datas
+🎨 UI moderna e responsiva
+⚡ Performance otimizada
+
+---
+
+### Melhorias Futuras
+ Dashboard completo
+ Testes automatizados
+ Melhorar UX mobile
+ Internacionalização (i18n)
+🤝 Contribuição
+
+Contribuições são bem-vindas!
+---
+
+# Licença
+
+Este projeto tem cunho somente educacional.
+
+# Autores
+
+Desenvolvido por:
+   Gabriel Pereira
+   Ketyllyn Kayanne
+   Leticia Gabrielly
+   Mariana Iarussi
+   Vinicius Maximus
 
 ---
 
 ## Data da Ultima Edição
 
-13/05/2026
+14/05/2026

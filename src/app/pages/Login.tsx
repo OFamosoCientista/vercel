@@ -1,22 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router';
-
 import { auth } from "../contexts/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDIkzpgOz8uDRSmv8Flo76ekwqzG4t_2EQ",
-  authDomain: "portprev-d81ba.firebaseapp.com",
-  projectId: "portprev-d81ba",
-  storageBucket: "portprev-d81ba.firebasestorage.app",
-  messagingSenderId: "593362605191",
-  appId: "1:593362605191:web:7d013144e93e51c24fd422",
-  measurementId: "G-47WS7923C2"
-};
-
-/*const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);*/
 
 export default function Login() {
   useEffect(() => {

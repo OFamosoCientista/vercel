@@ -4,17 +4,6 @@ import { auth, db } from "../contexts/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
-// Config Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyDIkzpgOz8uDRSmv8Flo76ekwqzG4t_2EQ",
-  authDomain: "portprev-d81ba.firebaseapp.com",
-  projectId: "portprev-d81ba",
-  storageBucket: "portprev-d81ba.firebasestorage.app",
-  messagingSenderId: "593362605191",
-  appId: "1:593362605191:web:7d013144e93e51c24fd422",
-  measurementId: "G-47WS7923C2"
-};
-
 export default function Signup() {
   useEffect(() => {
     document.title = "Cadastro - Cálculos Previdenciários | CalcPrev";

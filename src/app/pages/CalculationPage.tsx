@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router";
-import { ArrowLeft, Calculator, Download, Info } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowLeft, Calculator } from "lucide-react";
+import { useEffect } from "react";
 import TempoContribuicao from "../components/calculations/TempoContribuicao";
 import AposentadoriaIdade from "../components/calculations/AposentadoriaIdade";
 import AposentadoriaContribuicao from "../components/calculations/AposentadoriaContribuicao";
