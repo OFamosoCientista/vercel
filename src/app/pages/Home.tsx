@@ -68,6 +68,13 @@ const categories: CalculationCategory[] = [
     description: "Simule financiamentos com tabela de amortização detalhada",
     icon: <Table className="w-8 h-8" />,
     color: "from-amber-400 to-amber-600"
+  },
+  {
+    id: "regras-transicao",
+    title: "Regras de Transição",
+    description: "Calcule as regras de transição para aposentadoria conforme as leis vigentes",
+    icon: <FileText className="w-8 h-8" />,
+    color: "from-teal-500 to-teal-700"
   }
 ];
 

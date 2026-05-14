@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Plus, Trash2, Calendar } from "lucide-react";
-import { Button } from "react-day-picker";
 import Input from "@mui/material/Input";
 
 interface Period {
@@ -97,12 +96,14 @@ export default function TempoContribuicao() {
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm text-gray-600">Período {index + 1}</span>
                 {periods.length > 1 && (
-                  <Button
+                  <button
+                    type="button"
                     onClick={() => removePeriod(period.id)}
                     className="text-red-500 hover:text-red-700 transition-colors"
+                    aria-label={`Remover período ${index + 1}`}
                   >
                     <Trash2 className="w-5 h-5" />
-                  </Button>
+                  </button>
                 )}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

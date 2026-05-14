@@ -9,6 +9,7 @@ import ValoresAtrasados from "../components/calculations/ValoresAtrasados";
 import RMI from "../components/calculations/RMI";
 import JurosCalculator from "../components/calculations/JurosSimplesComposto";
 import AmortizacaoCalculator from "../components/calculations/Amortização";
+import RegrasTransicao from "../components/calculations/RegrasTransicao";
 
 const calculationInfo: Record<string, { title: string; description: string; color: string }> = {
   "tempo-contribuicao": {
@@ -51,6 +52,11 @@ const calculationInfo: Record<string, { title: string; description: string; colo
     description: "Simule financiamentos com tabela de amortização detalhada",
     color: "from-amber-400 to-amber-700"
   },
+  "regras-transicao": {
+    title: "Regras de Transição",
+    description: "Calcule as regras de transição para aposentadoria conforme as leis vigentes",
+    color: "from-teal-500 to-teal-700"
+  }
 };
 
 export default function CalculationPage() {
@@ -88,6 +94,8 @@ export default function CalculationPage() {
         return <JurosCalculator />;
       case "amortizacao":
         return <AmortizacaoCalculator />;
+      case "regras-transicao":
+        return <RegrasTransicao />;
       default:
         return null;
     }
