@@ -8,6 +8,7 @@ import RevisaoVidaToda from "../components/calculations/RevisaoVidaToda";
 import ValoresAtrasados from "../components/calculations/ValoresAtrasados";
 import RMI from "../components/calculations/RMI";
 import JurosCalculator from "../components/calculations/JurosSimplesComposto";
+import AmortizacaoCalculator from "../components/calculations/Amortização";
 
 const calculationInfo: Record<string, { title: string; description: string; color: string }> = {
   "tempo-contribuicao": {
@@ -44,7 +45,12 @@ const calculationInfo: Record<string, { title: string; description: string; colo
     title: "Juros Simples e Compostos",
     description: "Calcule o rendimento de juros simples e compostos ao longo do tempo",
     color: "from-yellow-500 to-yellow-700"
-  }
+  },
+  "amortizacao": {
+    title: "Amortização",
+    description: "Simule financiamentos com tabela de amortização detalhada",
+    color: "from-amber-400 to-amber-700"
+  },
 };
 
 export default function CalculationPage() {
@@ -80,6 +86,8 @@ export default function CalculationPage() {
         return <RMI />;
       case "juros":
         return <JurosCalculator />;
+      case "amortizacao":
+        return <AmortizacaoCalculator />;
       default:
         return null;
     }

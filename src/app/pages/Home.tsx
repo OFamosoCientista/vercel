@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Calculator, Clock, TrendingUp, FileText, DollarSign, Award, BadgeDollarSign } from "lucide-react";
+import { Calculator, Clock, TrendingUp, FileText, DollarSign, Award, BadgeDollarSign, Table } from "lucide-react";
 import { useEffect, useState } from "react";
 import { auth } from "../contexts/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -61,6 +61,13 @@ const categories: CalculationCategory[] = [
     description: "Calcule o valor final e os juros de um investimento ao longo do tempo",
     icon: <BadgeDollarSign className="w-8 h-8" />,
     color: "from-yellow-500 to-yellow-700"
+  },
+  {
+    id: "amortizacao",
+    title: "Amortização (PRICE e SAC)",
+    description: "Simule financiamentos com tabela de amortização detalhada",
+    icon: <Table className="w-8 h-8" />,
+    color: "from-amber-400 to-amber-600"
   }
 ];
 
