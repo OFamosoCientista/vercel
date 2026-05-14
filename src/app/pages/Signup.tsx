@@ -5,6 +5,25 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
 export default function Signup() {
+
+  function traduzErroFirebase(code: string) {
+    switch (code) {
+      case "auth/email-already-in-use":
+        return "Este e-mail já está em uso";
+      case "auth/invalid-email":
+        return "E-mail inválido";
+      case "auth/weak-password":
+        return "Senha muito fraca";
+      default:
+        return "Erro ao criar conta. Tente novamente.";
+    }
+  }
+
+  function isValidEmail(email: string) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
   useEffect(() => {
     document.title = "Cadastro - Cálculos Previdenciários | CalcPrev";
   }, []);
@@ -21,6 +40,16 @@ export default function Signup() {
     e.preventDefault();
     setError('');
 
+    if (!name.trim()) {
+      setError('Digite seu nome');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setError('Digite um e-mail válido');
+      return;
+    }
+
     if (password !== confirmPassword) {
       setError('As senhas não coincidem');
       return;
@@ -34,27 +63,23 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      // 🔹 cria usuário no Auth
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // 🔹 salva nome no Auth
       await updateProfile(user, {
         displayName: name
       });
 
-      // 🔥 SALVA NO FIRESTORE (o que você queria)
       await setDoc(doc(db, "users", user.uid), {
-        name: name,
-        email: email,
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
         createdAt: new Date()
       });
 
-      console.log("Conta criada com sucesso!");
       navigate("/login");
 
     } catch (err: any) {
-      setError(err.message);
+      setError(traduzErroFirebase(err.code));
     }
 
     setLoading(false);
